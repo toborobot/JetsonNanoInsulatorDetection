@@ -16,7 +16,7 @@ def get_frozen_graph(graph_file):
     return graph_def
 
 
-PATH_TO_TEST_IMAGES_DIR = '/home/jnano/tf/prog10/test/images/'
+PATH_TO_TEST_IMAGES_DIR = './test/images/'
 TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, '8{}.jpg'.format(i)) for i in range(5, 10) ]
 
 # The TensorRT frozen inference graph

@@ -21,8 +21,8 @@ import time
 #because it insltall all PATHs with installation and tensorflow models located in
 #tf_trt_models/third_party/models directory
 ################################################################################
-#sys.path.append('/home/jnano/tf/models/research/')
-#sys.path.append('/home/jnano/tf/models/research/slim/')
+#sys.path.append('/home/jnano/tf_trt_models/third_party/models/research/')
+#sys.path.append('/home/jnano/tf_trt_models/third_part/models/research/slim/')
 
 from object_detection.utils import ops as utils_ops
 from object_detection.utils import label_map_util
@@ -43,18 +43,17 @@ def load_image_into_numpy_array(image):
 time_start = time.time()
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
-PATH_TO_CKPT = '/home/jnano/tf/prog10/resources_tf/fine_tuned_model' + '/frozen_inference_graph.pb'
+PATH_TO_CKPT = './resources_tf/fine_tuned_model' + '/frozen_inference_graph.pb'
 # List of the strings that is used to add correct label for each box.
-PATH_TO_LABELS = os.path.join('/home/jnano/tf/prog10/resources_tf/data/', 'object-detection.pbtxt')
+PATH_TO_LABELS = os.path.join('./resources_tf/data/', 'object-detection.pbtxt')
 #number ofclassesfor classification
 NUM_CLASSES = 1
 
 #for local testing
 # If you want to test the code with your images, just add path to the images to the TEST_IMAGE_PATHS.
-PATH_TO_TEST_IMAGES_DIR = '/home/jnano/tf/prog10/test/images/'
+PATH_TO_TEST_IMAGES_DIR = './test/images/'
 TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, '8{}.jpg'.format(i)) for i in range(5, 10) ]
-#print(TEST_IMAGE_PATHS)
-#['/home/odroid/tf/prog5/test/resources/88.jpg']
+
 
 
 # init graph
@@ -110,7 +109,7 @@ with detection_graph.as_default():
 
     print(time.time()-time_start)
 
-    for counter_ in range(0,1000): # average detection time 0.067 per one image ~ 15FPS
+    for counter_ in range(0,10): # average detection time 0.067 per one image ~ 15FPS
         for image_path in TEST_IMAGE_PATHS:
           #this part is for PIL image processing
           """
@@ -168,7 +167,7 @@ with detection_graph.as_default():
               use_normalized_coordinates=True,
               line_thickness=3)
 
-          vis_util.save_image_array_as_png(image_np,'/home/jnano/tf/prog10/test/images/result.png')
+          vis_util.save_image_array_as_png(image_np,'./test/images/result.png')
           #make result png string from image numpy array
           #result_string = vis_util.encode_image_array_as_png_str(image_np)
           #print(result_string)
