@@ -4,7 +4,7 @@ import tensorflow as tf
 import tensorflow.contrib.tensorrt as trt
 # Inference with TF-TRT frozen graph workflow:
 
-frozen_graph_path = '/home/jnano/tf/prog10/resources_tf/fine_tuned_model/frozen_inference_graph.pb'
+frozen_graph_path = './resources_tf/fine_tuned_model/frozen_inference_graph.pb'
 output_names = ['num_detections','detection_classes','detection_boxes','detection_scores']
 
 graph = tf.Graph()

@@ -9,9 +9,9 @@ import os
 ################################################################################
 #sys.path.append('/home/jnano/tf/models/research/')
 #sys.path.append('/home/jnano/tf/models/research/slim/')
-config_path = '/home/jnano/tf/prog10/resources_tf/fine_tuned_model/pipeline.config'
-checkpoint_path = '/home/jnano/tf/prog10/resources_tf/fine_tuned_model/model.ckpt'
-frozen_graph_path = '/home/jnano/tf/prog10/resources_tf/fine_tuned_model'
+config_path = './resources_tf/fine_tuned_model/pipeline.config'
+checkpoint_path = './resources_tf/fine_tuned_model/model.ckpt'
+frozen_graph_path = './resources_tf/fine_tuned_model'
 output_names = ['num_detections','detection_classes','detection_boxes','detection_scores']
 """
 frozen_graph, input_names, output_names = build_detection_graph(

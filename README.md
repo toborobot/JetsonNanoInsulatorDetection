@@ -38,5 +38,30 @@ cd tf_trt_models
 ```
 You have all installed TensorRT models in /tf_trt_models and also in /tf_trt_models/third_party/models all Tensorflow models zoo (https://github.com/tensorflow/models)
 
+Directory and file structure
+- resources_tf - tensorflow trained graph for Insulator detection.
+  this frozen model transferred to TensorRT graph inside
+- resourses_trt directory. Also tis directory has python scripts to prepare TensorRT graph from Tensorflow graph
+  -frozen_graph_to_trt.py - script to transfere TF frozen graph to TRT
+  -pb_to_pb_trt_transfere.py - also the script with othe approach to prepare TRT frozen graph
+  -trt_graph.pb - frozen TRT graph
+- test/images - directory for testing images
+
+-detect_tf.py - script to test tensorflow speed of Inference
+-detect_trt.py - script to  test TensorRT speed
+
+***
+results
+***
+Testing with tensorflow frozen graph give about 0.07sec per one image (~15FPS)
+Testing with TensorRT frozen graph give about 0.09 sec per image (~11FPS)
+Loading of TF program to memory - about 15 seconds
+Loading TRT program for execution about 200 seconds
+
+some problems with TRT approach is could be the training of base tensorflow graph which is used for TRT have done with different sized images ( not 224x224 or 300x300 ) - but thisis not definitely - need to understand later
+
+also recognition of TensorRT graph have bad results with some amount of insulators  at the picture and small insulators...
+
+
 example
 ![insulators detected](test/images/result.png)
