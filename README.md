@@ -39,4 +39,4 @@ cd tf_trt_models
 You have all installed TensorRT models in /tf_trt_models and also in /tf_trt_models/third_party/models all Tensorflow models zoo (https://github.com/tensorflow/models)
 
 example
-![insulators detected](prog10/test/images/result.png)
+![insulators detected](test/images/result.png)
