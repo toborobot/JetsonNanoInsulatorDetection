@@ -1,0 +1,33 @@
+python3 detect_tf.py
+2019-05-25 20:36:50.318603: W tensorflow/core/platform/profile_utils/cpu_utils.cc:98] Failed to find bogomips in /proc/cpuinfo; cannot determine CPU frequency
+2019-05-25 20:36:50.319259: I tensorflow/compiler/xla/service/service.cc:161] XLA service 0x2c88cd40 executing computations on platform Host. Devices:
+2019-05-25 20:36:50.319322: I tensorflow/compiler/xla/service/service.cc:168]   StreamExecutor device (0): <undefined>, <undefined>
+2019-05-25 20:36:50.431621: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:965] ARM64 does not support NUMA - returning NUMA node zero
+2019-05-25 20:36:50.432253: I tensorflow/compiler/xla/service/service.cc:161] XLA service 0x242e08f0 executing computations on platform CUDA. Devices:
+2019-05-25 20:36:50.432329: I tensorflow/compiler/xla/service/service.cc:168]   StreamExecutor device (0): NVIDIA Tegra X1, Compute Capability 5.3
+2019-05-25 20:36:50.432750: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties:
+name: NVIDIA Tegra X1 major: 5 minor: 3 memoryClockRate(GHz): 0.9216
+pciBusID: 0000:00:00.0
+totalMemory: 3.87GiB freeMemory: 1.51GiB
+2019-05-25 20:36:50.432829: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-25 20:36:51.634978: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-25 20:36:51.635065: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0
+2019-05-25 20:36:51.635104: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N
+2019-05-25 20:36:51.635286: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 1147 MB memory) -> physical GPU (device: 0, name: NVIDIA Tegra X1, pci bus id: 0000:00:00.0, compute capability: 5.3)
+6.787420272827148
+2019-05-25 20:37:06.781820: W tensorflow/core/common_runtime/bfc_allocator.cc:211] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.05GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2019-05-25 20:37:07.483913: W tensorflow/core/common_runtime/bfc_allocator.cc:211] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.07GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2019-05-25 20:37:07.938149: W tensorflow/core/common_runtime/bfc_allocator.cc:211] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.13GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2019-05-25 20:37:08.132305: W tensorflow/core/common_runtime/bfc_allocator.cc:211] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.13GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2019-05-25 20:37:08.185010: W tensorflow/core/common_runtime/bfc_allocator.cc:211] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.26GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+time of inference:18.9060161113739
+detected 5
+time of inference:0.32711172103881836
+detected 2
+time of inference:0.11663103103637695
+detected 2
+time of inference:0.10812783241271973
+detected 2
+time of inference:0.10611200332641602
+detected 2
+thats all folks

@@ -1,0 +1,18 @@
+#read me file for prepare TensorflowRT model from tensorflow frozen graph
+
+#article here
+https://www.dlology.com/blog/how-to-run-tensorflow-object-detection-model-on-jetson-nano/
+
+#first need to clone model from official nvidia github
+cd ~
+git clone --recursive https://github.com/NVIDIA-Jetson/tf_trt_models.git
+cd tf_trt_models
+./install.sh python3
+при этом в директорию tf_trt_models устанавливаются модели tensorflow
+
+
+#create directory resources_trt
+#make program for transfere fromtensorflow to trt pb
+
+#link for tensorflow to tensorrt
+https://github.com/NVIDIA-AI-IOT/tf_to_trt_image_classification
