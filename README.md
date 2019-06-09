@@ -65,3 +65,8 @@ also recognition of TensorRT graph have bad results with some amount of insulato
 
 example
 ![insulators detected](test/images/result.png)
+
+Update!
+with this approach https://github.com/NVIDIA-AI-IOT/tf_trt_models/blob/master/examples/detection/detection.ipynb
+I have recieved better result (about 20fps) with TensorRT library....
+![insulator detected](test/images/ddeteccted_result.png)
